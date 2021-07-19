@@ -11,11 +11,11 @@ function Body() {
               THIS BOX CONTAINS THE QUESTION
               </h2>
             </div>
-            <div className='flex flex-wrap mt-4 justify-between'>  
-            <button className='bg-white w-1/2 p-4 text-purple-800 font-semibold rounded shadow'>ANSWER A</button>
-            <button className='bg-white w-1/2 p-4 text-purple-800 font-semibold rounded shadow'>ANSWER B</button>
-            <button className='bg-white w-1/2 p-4 text-purple-800 font-semibold rounded shadow'>ANSWER C</button>
-            <button className='bg-white w-1/2 p-4 text-purple-800 font-semibold rounded shadow'>ANSWER D</button> 
+            <div className='flex flex-wrap mt-4 justify-around'>  
+            <button className='w-2/5 p-4 text-purple-800 font-semibold rounded shadow mb-4 bg-green-500 hover:bg-red-200'>ANSWER A</button>
+            <button className='w-2/5 p-4 text-purple-800 font-semibold rounded shadow mb-4 bg-green-500 hover:bg-red-200'>ANSWER B</button>
+            <button className='w-2/5 p-4 text-purple-800 font-semibold rounded shadow mb-4 bg-green-500 hover:bg-red-200'>ANSWER C</button>
+            <button className='w-2/5 p-4 text-purple-800 font-semibold rounded shadow mb-4 bg-green-500 hover:bg-red-200'>ANSWER D</button> 
             </div>
         </div>
     )
