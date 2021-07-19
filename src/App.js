@@ -1,24 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { Questionaire } from './components'; 
+
 
 const API_URL = 'https://opentdb.com/api.php?amount=20&category=11&difficulty=easy&type=multiple'
 
+//FIRST FUNCTION
+//GET QUESTIONS FROM API 
+//SHOW RIGHT ANSWER WITH GREEN  
+//SHOW WRONG ANSWER WITH RED
+//GRAB NEXT QUESTION
+//KEEP TRACK OF POINTS 
 
-function Body() {
-    return (
+
+function App() {
+  const [ questions, setQuestions ] = useState([]);
+
+  useEffect (() => {
+    fetch(API_URL) 
+    .then((res) => res.json())
+    .then((data) => {
+      setQuestions(data.results)
+    });
+  }, []);
+
+    return questions.length > 0 ? (
         <div className='container'>
-            <div className='bg-white text-purple-800 p-10 rounded-xl shadow-md'>
-              <h2 className='text-2xl'>
-              1. THIS BOX CONTAINS THE QUESTION
-              </h2>
-            </div>
-            <div className='flex flex-wrap mt-4 justify-around grid gap-x-8 gap-y-4 grid-cols-2'>  
-            <button className='p-4 text-purple-800 font-semibold rounded-xl shadow mb-4 bg-green-500 hover:bg-red-200'>ANSWER A</button>
-            <button className='p-4 text-purple-800 font-semibold rounded-xl shadow mb-4 bg-green-500 hover:bg-red-200'>ANSWER C</button>
-            <button className='p-4 text-purple-800 font-semibold rounded-xl shadow mb-4 bg-green-500 hover:bg-red-200'>ANSWER B</button>
-            <button className='p-4 text-purple-800 font-semibold rounded-xl shadow mb-4 bg-green-500 hover:bg-red-200'>ANSWER D</button> 
-            </div>
-        </div>
-    )
+          <Questionaire data={questions[0]} />
+    </div>
+      ) : (
+        <h1 className='text-2xl text-white font-bold'>Loading...</h1>
+      )
 }
 
-export default Body
+export default App
