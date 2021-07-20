@@ -23,9 +23,13 @@ function App() {
     });
   }, []);
 
+  const handleAnswer = (answer) => {
+    console.log(answer);
+  }
+
     return questions.length > 0 ? (
         <div className='container'>
-          <Questionaire data={questions[0]} />
+          <Questionaire data={questions[0]} handleAnswer={handleAnswer}/>
     </div>
       ) : (
         <h1 className='text-2xl text-white font-bold'>Loading...</h1>
