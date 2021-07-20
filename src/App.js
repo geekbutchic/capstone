@@ -11,7 +11,6 @@ const API_URL = 'https://opentdb.com/api.php?amount=20&category=11&difficulty=ea
 //GRAB NEXT QUESTION
 //KEEP TRACK OF POINTS 
 
-
 function App() {
   const [ questions, setQuestions ] = useState([]);
 

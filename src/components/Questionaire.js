@@ -3,7 +3,7 @@ import React from 'react'
 const Button = ({ answer, className }) => (
     <button className={`p-4 text-purple-800 font-semibold rounded-xl shadow mb-4 bg-white hover:bg-red-200 ${className}`}>{ answer }</button>
 )
- 
+
 const Questionaire = ({ handleAnswer, data: {question, correct_answer, incorrect_answers} }) => {   
     const shuffledAnswer = [correct_answer, ...incorrect_answers].sort(() => Math.random() - 0.5)
     return (
