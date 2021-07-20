@@ -24,7 +24,7 @@ function App() {
   }, []);
 
   const handleAnswer = (answer) => {
-    console.log(answer);
+    //CHECK FOR ANSWER 
   }
 
     return questions.length > 0 ? (
