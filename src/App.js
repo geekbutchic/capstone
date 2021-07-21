@@ -13,36 +13,48 @@ function App() {
     fetch(API_URL) 
     .then((res) => res.json())
     .then((data) => {
-      setQuestions(data.results)
+      const questions = data.results.map((question) => 
+      ({
+          ...question,
+          answers: [
+            question.correct_answer,
+            ...question.incorrect_answers,
+          ].sort(() => Math.random() - 0.5)
+        }));
+      setQuestions(questions);
     });
-  }, []);
+  }, []); 
 
   const handleAnswer = (answer) => {
     if(!showAnswers) {
-    if (answer === questions[currentIndex].correct_answer) {//IF ANSWER MATCHES INCREASE SCORE
-      setScore(score + 1); //INCREASES SCORE
+    if (answer === questions[currentIndex].correct_answer) {
+      setScore(score + 1); 
     } 
-
   }
     setShowAnswers(true)
-    // const newIndex = currentIndex + 1
-    // setCurrentIndex(newIndex)
+  };
+
+  const handleNextQuestion = () => {
+    setShowAnswers(false);
+    setCurrentIndex(currentIndex + 1)
   }
 
-  return questions.length > 0 ? (    
-       <div className='container'>
-         {currentIndex >= questions.length ? (
-          <h1 className='text-2xl text-white font-bold bg-red-400 rounded-xl p-2'>GAME ENDED YOUR FINAL SCORE IS: {score}/20</h1>
-      ) : (
-        <Questionaire//PROPS  
-        data={questions[currentIndex]}
-        showAnswers={showAnswers}
-        handleAnswer={handleAnswer}/>
-      )}
-      </div>
-      ):(
-          <h1 className='text-2xl text-white font-bold'>Loading...</h1> 
-      );
+return questions.length > 0 ? (    
+     <div className='container'>
+       {currentIndex >= questions.length ? (
+        <h1 className='text-2xl text-white font-bold bg-red-400 rounded-xl p-2'>GAME ENDED YOUR FINAL SCORE IS: {score}/20</h1>
+    ) : (
+      <Questionaire
+      data={questions[currentIndex]}
+      showAnswers={showAnswers}
+      handleNextQuestion={handleNextQuestion}
+      handleAnswer={handleAnswer}
+      />
+    )}
+    </div>
+    ):(
+        <h1 className='text-2xl text-white font-bold'>Loading...</h1> 
+    );
 }
 
 
