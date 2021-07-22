@@ -7,6 +7,8 @@
 //https://media.giphy.com/media/l3vR7tIqT4VAnv5jq/giphy.gif - Bubbles
 //https://media.giphy.com/media/6vdNq5hA7heSIHGWZG/giphy.gif - Face 
 //https://media.giphy.com/media/toVY0TSTwawYID30so/giphy.gif - Artsy Face
+//https://media.giphy.com/media/hrWWmOdGlxYpFErRtD/giphy.gif - Smiles
+//https://media.giphy.com/media/cmOG2ZP7YeSPNgqVJX/giphy.gif - Swing Smiley
 
 //  <Button className={correct_answer === shuffledAnswer[0] ? 'bg-purple-300' : ''} onClick={() => handleAnswer(shuffledAnswer[0])} answer={shuffledAnswer[0]}/>
 // <Button className={correct_answer === shuffledAnswer[1] ? 'bg-purple-300' : ''} onClick={() => handleAnswer(shuffledAnswer[1])} answer={shuffledAnswer[1]}/>

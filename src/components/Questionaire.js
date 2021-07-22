@@ -11,11 +11,11 @@ const Questionaire = ({ showAnswers, handleAnswer,handleNextQuestion, data: {que
         </div>
         <div className='flex flex-wrap mt-4 justify-around grid gap-x-8 gap-y-4 grid-cols-2'>
         
-        {answers.map((answer, idx) => {
+        {answers.map((answer, idx) => {//MAP OVER BUTTONS 
         const bgColor = showAnswers ? answer === correct_answer ? 'bg-green-300' : 'bg-red-300' : 'bg-white';
         return (
         <button
-        key={idx}
+        key={idx}//KEY FOR PROPS
         className={`${bgColor} p-4 text-black font-semibold rounded-xl shadow mb-4 bg-white hover:bg-blue-300`}
         onClick={() => handleAnswer(answer)}
         dangerouslySetInnerHTML={{ __html: answer }}/>
