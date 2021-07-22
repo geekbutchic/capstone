@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 const Questionaire = ({ showAnswers, handleAnswer,handleNextQuestion, data: {question, correct_answer, answers} }) => {    
     return (
     <div>
@@ -27,8 +26,8 @@ const Questionaire = ({ showAnswers, handleAnswer,handleNextQuestion, data: {que
             <div className="flex justify-center items-center">
             <button
             onClick={handleNextQuestion}
-            className={`p-3 text-black font-semibold rounded-xl shadow mb-4 bg-red-400 hover:bg-red-400`}>
-            Next Question 
+            className={`p-3 text-black font-semibold rounded-xl shadow mb-4 bg-blue-200 hover:bg-blue-400`}>
+            Next Question
             </button>
             </div>
         )}
