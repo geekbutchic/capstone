@@ -1,5 +1,6 @@
 import React from 'react'
 
+//DECONSTRUCT FOR HOOKS + DOUBLE DECONSTRUCT 
 const Questionaire = ({ showAnswers, handleAnswer,handleNextQuestion, data: {question, correct_answer, answers} }) => {    
     return (
     <div>
