@@ -3,7 +3,6 @@ import { Questionaire } from './components';
  
 const API_URL = 'https://opentdb.com/api.php?amount=20&category=11&difficulty=easy&type=multiple'
 
-
 function App() { 
   const [ questions, setQuestions ] = useState([]);
   const [ currentIndex, setCurrentIndex ] = useState(0);
