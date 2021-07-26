@@ -7,7 +7,7 @@ function App() {//SETS STATE FOR HOOKS
   const [ questions, setQuestions ] = useState([]);
   const [ currentIndex, setCurrentIndex ] = useState(0);
   const [score, setScore] = useState(0);
-  const [showAnswers, setShowAnswers] = useState(false)
+  const [ answers, setAnswers] = useState(false)
 
   useEffect (() => {
     fetch(API_URL) 
@@ -26,16 +26,16 @@ function App() {//SETS STATE FOR HOOKS
   }, []); 
 
   const handleAnswer = (answer) => {
-    if(!showAnswers) {
+    if(!answers) {
     if (answer === questions[currentIndex].correct_answer) {
       setScore(score + 1); 
     } 
   }
-    setShowAnswers(true)
+    setAnswers(true)
   };
 
   const handleNextQuestion = () => {
-    setShowAnswers(false);
+    setAnswers(false);
     setCurrentIndex(currentIndex + 1)
   }
 
@@ -46,7 +46,7 @@ return questions.length > 0 ? (
     ) : (//PASSING IN PROPS 
       <Questionaire
       data={questions[currentIndex]}
-      showAnswers={showAnswers}
+      showAnswers={answers}
       handleNextQuestion={handleNextQuestion}
       handleAnswer={handleAnswer}
       />
