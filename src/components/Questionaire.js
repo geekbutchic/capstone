@@ -13,7 +13,7 @@ const Questionaire = ({ showAnswers, handleAnswer,handleNextQuestion, data: {que
         <div className='flex flex-wrap mt-4 justify-around grid gap-x-8 gap-y-4 grid-cols-2'>
         
         {answers.map((answer, index) => {//MAP OVER BUTTONS 
-        const bgColor = showAnswers ? answer === correct_answer ? 'bg-green-300' : 'bg-red-300' : 'bg-white';
+        const bgColor = showAnswers ? answer === correct_answer ? 'bg-green-300' : 'bg-red-300' : '';
         return (
         <button
         key={index}//KEY FOR PROPS
