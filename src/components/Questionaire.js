@@ -5,7 +5,7 @@ const Questionaire = ({ showAnswers, handleAnswer,handleNextQuestion, data: {que
     return (
     <div>
         <div>
-            <h1 className='text-6xl p-8 text-red-600 flex justify-center items-center font-serif Georgia text-white'>Quiz Me Baby One More Time</h1>
+            <h1 className='text-6xl p-8 text-red-600 flex justify-center items-center font-serif Georgia text-white'>Red Hot Trivia Peppers!</h1>
         </div>
         <div className='bg-white text-black p-8 rounded-xl shadow-md font-semibold'>
         <h2 className='text-2xl' dangerouslySetInnerHTML={{ __html: question }}/>

@@ -3,10 +3,10 @@ import { Questionaire } from './components';
 
 const API_URL = 'https://opentdb.com/api.php?amount=20&category=11&difficulty=easy&type=multiple'//API URL 
 
-function App() {//SETS STATE FOR HOOKS
+function App() {//SETS STATE FOR HOOKS  
   const [ questions, setQuestions ] = useState([]);
   const [ currentIndex, setCurrentIndex ] = useState(0);
-  const [score, setScore] = useState(0);
+  const [value, setScore] = useState(0);
   const [ answers, setAnswers] = useState(false)
 
   useEffect (() => {
@@ -28,7 +28,7 @@ function App() {//SETS STATE FOR HOOKS
   const handleAnswer = (answer) => {
     if(!answers) {
     if (answer === questions[currentIndex].correct_answer) {
-      setScore(score + 1); 
+      setScore(value + 1); 
     } 
   }
     setAnswers(true)
@@ -42,7 +42,7 @@ function App() {//SETS STATE FOR HOOKS
 return questions.length > 0 ? (    
      <div className='container'>
        {currentIndex >= questions.length ? (
-        <h1 className='text-2xl text-white font-bold bg-red-400 rounded-xl p-2'>GAME ENDED YOUR FINAL SCORE IS: {score}/20</h1>
+        <h1 className='text-2xl text-white font-bold bg-red-400 rounded-xl p-2'>GAME ENDED YOUR FINAL SCORE IS: {value}/20</h1>
     ) : (//PASSING IN PROPS 
       <Questionaire
       data={questions[currentIndex]}
@@ -56,6 +56,5 @@ return questions.length > 0 ? (
         <h1 className='text-2xl text-white font-bold'>Loading...</h1>//SETS LOADING SCREEN IF DELAYED - USUALLY 1 TO 2 SECONDS 
     );
 }
-
 
 export default App
