@@ -14,7 +14,7 @@ const Questionaire = ({
           Red Hot Trivia Peppers!
         </h1>
       </div>
-      <div className="bg-green-100 text-black p-8 rounded-xl shadow-md font-semibold">
+      <div className="bg-yellow-100 text-black p-8 rounded-xl shadow-md font-semibold">
         <h2
           className="text-2xl"
           dangerouslySetInnerHTML={{ __html: question }}
@@ -27,7 +27,7 @@ const Questionaire = ({
             ? answer === correct_answer
               ? "bg-green-300"
               : "bg-red-300"
-            : "bg-green-100";
+            : "bg-yellow-50";
           return (
             <button
               key={index} //KEY FOR PROPS
