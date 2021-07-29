@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"; // REACT HOOKS - DECONSTRUCTED
 import { Questionaire } from "./components";
 
-// const API_URL1 = 'https://opentdb.com/api.php?amount=20&category=11&difficulty=easy&type=multiple'//API URL//MOVIES
-const API_URL =
-  "https://opentdb.com/api.php?amount=20&category=12&difficulty=easy&type=multiple"; //MUSIC
+const API_URL = 'https://opentdb.com/api.php?amount=20&category=11&difficulty=easy&type=multiple'//API URL//MOVIES
+// const API_URL =
+//   "https://opentdb.com/api.php?amount=20&category=12&difficulty=easy&type=multiple"; //MUSIC
 
 function App() {
   //SETS STATE FOR HOOKS

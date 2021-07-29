@@ -11,10 +11,10 @@ const Questionaire = ({
     <div>
       <div>
         <h1 className="text-6xl p-8 text-red-600 flex justify-center items-center font-serif Georgia text-white">
-          Red Hot Trivia Peppers!
+          Quiz Me Baby One More Time!
         </h1>
       </div>
-      <div className="bg-yellow-100 text-black p-8 rounded-xl shadow-md font-semibold">
+      <div className="bg-blue-200 text-black p-8 rounded-xl shadow-md font-semibold">
         <h2
           className="text-2xl"
           dangerouslySetInnerHTML={{ __html: question }}
@@ -27,11 +27,11 @@ const Questionaire = ({
             ? answer === correct_answer
               ? "bg-green-300"
               : "bg-red-300"
-            : "bg-yellow-50";
+              : "bg-green-50";
           return (
             <button
               key={index} //KEY FOR PROPS
-              className={`${bgColor} p-4 text-black font-semibold rounded-xl shadow mb-4 bg-white hover:bg-blue-300`}
+              className={`${bgColor} p-4 text-black font-semibold rounded-xl shadow mb-4 bg-red-100 hover:bg-blue-200`}
               onClick={() => handleAnswer(answer)}
               dangerouslySetInnerHTML={{ __html: answer }}
             />
@@ -42,7 +42,7 @@ const Questionaire = ({
         <div className="flex justify-center items-center">
           <button
             onClick={handleNextQuestion}
-            className={`p-3 text-black font-semibold rounded-xl shadow mb-4 bg-blue-200 hover:bg-blue-400`}
+            className={`p-3 text-black font-semibold rounded-xl shadow mb-4 bg-blue-100 hover:bg-yellow-400`}
           >
             Next Question
           </button>
