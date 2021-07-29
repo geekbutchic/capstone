@@ -10,7 +10,7 @@ const Questionaire = ({
   return (
     <div>
       <div>
-        <h1 className="text-6xl p-8 text-red-600 flex justify-center items-center font-serif Georgia text-white">
+        <h1 className="m-1 text-6xl p-8 text-red-600 flex justify-center items-center font-serif Georgia text-white">
           Quiz Me Baby One More Time!
         </h1>
       </div>
@@ -20,8 +20,8 @@ const Questionaire = ({
           dangerouslySetInnerHTML={{ __html: question }}
         />
       </div>
-      <div className="flex flex-wrap mt-4 justify-around grid gap-x-8 gap-y-4 grid-cols-2">
-        {answers.map((answer, index) => {
+      <div className="flex flex-wrap mt-4 justify-around grid gap-x-6 gap-y-4 grid-cols-4">
+        {answers.map((answer, index) => {//GRID APPLIED 
           //MAP OVER BUTTONS
           const bgColor = showAnswers
             ? answer === correct_answer
