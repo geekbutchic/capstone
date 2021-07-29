@@ -14,7 +14,7 @@ const Questionaire = ({
           Quiz Me Baby One More Time!
         </h1>
       </div>
-      <div className="bg-blue-200 text-black p-8 rounded-xl shadow-md font-semibold">
+      <div className="bg-blue-200 flex justify-center text-black p-8 rounded-xl shadow-md font-semibold">
         <h2
           className="text-2xl"
           dangerouslySetInnerHTML={{ __html: question }}

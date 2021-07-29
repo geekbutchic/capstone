@@ -10,7 +10,7 @@
 //https://media.giphy.com/media/hrWWmOdGlxYpFErRtD/giphy.gif - Smiles
 //https://media.giphy.com/media/cmOG2ZP7YeSPNgqVJX/giphy.gif - Swing Smiley
 
-//  <Button className={correct_answer === shuffledAnswer[0] ? 'bg-purple-300' : ''} onClick={() => handleAnswer(shuffledAnswer[0])} answer={shuffledAnswer[0]}/>
+// <Button className={correct_answer === shuffledAnswer[0] ? 'bg-purple-300' : ''} onClick={() => handleAnswer(shuffledAnswer[0])} answer={shuffledAnswer[0]}/>
 // <Button className={correct_answer === shuffledAnswer[1] ? 'bg-purple-300' : ''} onClick={() => handleAnswer(shuffledAnswer[1])} answer={shuffledAnswer[1]}/>
 // <Button className={correct_answer === shuffledAnswer[2] ? 'bg-purple-300' : ''} onClick={() => handleAnswer(shuffledAnswer[2])} answer={shuffledAnswer[2]}/>
 // <Button className={correct_answer === shuffledAnswer[3] ? 'bg-purple-300' : ''} onClick={() => handleAnswer(shuffledAnswer[3])} answer={shuffledAnswer[3]}/> 

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"; // REACT HOOKS - DECONSTRUCTED
 import { Questionaire } from "./components";
 
-const API_URL = 'https://opentdb.com/api.php?amount=20&category=11&difficulty=easy&type=multiple'//API URL//MOVIES
-// const API_URL =
-//   "https://opentdb.com/api.php?amount=20&category=12&difficulty=easy&type=multiple"; //MUSIC
+//API_URL IN VARIABLE - SAVED IN VARIABLE
+const API_URL = 'https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=multiple'//API URL//MOVIES
+
 
 function App () {
   //SETS STATE FOR HOOKS
@@ -45,7 +45,7 @@ function App () {
     <div className="container">
       {currentIndex >= questions.length ? (
         <h1 className="text-2xl text-white font-bold bg-red-400 rounded-xl p-2">
-          GAME ENDED YOUR FINAL SCORE IS: {value}/20
+          GAME ENDED YOUR FINAL SCORE IS: {value}/10
         </h1>
       ) : (
         //PASSING IN PROPS
