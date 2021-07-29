@@ -5,7 +5,7 @@ const API_URL = 'https://opentdb.com/api.php?amount=20&category=11&difficulty=ea
 // const API_URL =
 //   "https://opentdb.com/api.php?amount=20&category=12&difficulty=easy&type=multiple"; //MUSIC
 
-function App() {
+function App () {
   //SETS STATE FOR HOOKS
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
